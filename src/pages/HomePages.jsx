@@ -197,6 +197,7 @@ const [scrolled, setScrolled] = useState(false);
             <a href="#fleet" className="hover:text-orange-700">Fleet</a>
             <a href="#services" className="hover:text-orange-700">Services</a>
             <a href="#about" className="hover:text-orange-700">About</a>
+            <a href="#testimonials" className="hover:text-orange-700">Testimonials</a>
             <a href="#contact" className="hover:text-orange-700">Contact</a>
           </nav>
           <a
@@ -226,7 +227,15 @@ const [scrolled, setScrolled] = useState(false);
   <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />
 
   <div className="mx-auto flex min-h-[720px] max-w-7xl items-center px-6 py-20 md:px-10 lg:px-16">
-    <div className="max-w-2xl">
+    <div className="max-w-2xl space-y-4">
+
+       <div className="inline-flex items-center gap-3 py-2">
+              <span className="h-2 w-2 rounded-full bg-green-600 shadow-[0_0_10px_8px_rgba(74,222,128,0.7)] animate-pulse"></span>
+
+              <span className="text-md text-gray-300">
+                We are active 24/7
+              </span>
+            </div>
 
       <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
         Car hire in Abuja
@@ -287,7 +296,7 @@ const [scrolled, setScrolled] = useState(false);
     return (
       <div
         key={item.label}
-        className="flex items-center gap-2 rounded-xl border border-white/50 bg-black/20 px-3 py-4 backdrop-blur-sm sm:gap-4 sm:px-5"
+        className="flex items-center gap-2 rounded-xl border border-white/50 bg-black/20 px-3 py-4 backdrop-blur-sm sm:gap-4 sm:px-5 hover:border-orange-700 hover:translate-y-1 transition duration-200 ease-in-out"
       >
         <Icon className="shrink-0 text-2xl text-orange-500 sm:text-3xl" />
 
@@ -369,7 +378,7 @@ const [scrolled, setScrolled] = useState(false);
             <h1 className="font-serif lg:text-4xl text-3xl leading-tight">A small special team that actually picks up the phone.
             </h1>
 
-            <div className="text-stone-300 space-y-4">
+            <div className="text-stone-300 space-y-4 md:text-lg">
             <p>
               <span className="text-orange-500 font-bold">DV</span> Drive started with three cars and one rule: if a customer messages,
               someone answers. The fleet is bigger now, but that rule hasn't changed.
@@ -384,10 +393,96 @@ const [scrolled, setScrolled] = useState(false);
             
           <div className="rounded-sm shadow-stone-800 shadow hover:scale-105 transition duration-300 ease-in-out" >
           
-            <img src="Sunset Drive Beside the City Skyline.png" className="h-full object-fill "/>
+            <img src="Mercedes E-Class Beneath Abuja Sunset.png" className="h-full object-fill rounded-sm"/>
           </div>
         </div>
       </section>
+
+      
+
+<section
+  id="testimonials"
+  className="scroll-mt-20 border-t border-stone-900/10 bg-stone-200/40 px-6 py-20 md:px-10 lg:px-16"
+>
+  <div className="mx-auto max-w-7xl">
+
+    
+    <div className="mb-12 text-center">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">
+        Customer experiences
+      </p>
+
+      <h2 className="font-serif text-4xl font-bold text-stone-900 md:text-5xl">
+        What our clients say
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-xl text-stone-600">
+        Real experiences. Reliable journeys. Happy customers.
+      </p>
+    </div>
+
+  
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+      {[
+        {
+          name: "David O.",
+          review:
+            "A clean, comfortable ride and a smooth booking experience. Everything was handled professionally.",
+        },
+        {
+          name: "Sarah M.",
+          review:
+            "Professional service from booking to drop-off. The entire experience was stress-free.",
+        },
+        {
+          name: "Michael A.",
+          review:
+            "The car was in excellent condition and very comfortable. I would definitely book again.",
+        },
+        {
+          name: "Grace E.",
+          review:
+            "Great communication and excellent customer service. Highly recommended for anyone in Abuja.",
+        },
+      ].map((item) => (
+        <div
+          key={item.name}
+          className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          
+          <div className="mb-5 flex flex-wrap items-center gap-2">
+            <span className="text-lg tracking-wide text-orange-500">
+              ★★★★★
+            </span>
+
+            <h3 className="text-sm font-bold text-stone-900">
+              {item.name}
+            </h3>
+          </div>
+
+          
+          <p className="text-sm leading-7 text-stone-600">
+            "{item.review}"
+          </p>
+
+          
+          <div className="mt-6 flex items-center gap-2 border-t border-stone-100 pt-4">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-100 text-xs text-orange-600">
+              ✓
+            </span>
+
+            <span className="text-xs font-medium text-stone-500">
+              Customer review
+              </span>
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
 
       <section id="contact" className="mx-auto grid max-w-6xl scroll-mt-20 gap-12 px-5 py-16 md:grid-cols-2">
         <div>
